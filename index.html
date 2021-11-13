@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS  learning</title>
+    <link rel="icon" href="/icon.ico">
+    <script src="checkPassword.js"></script>
+    <script>
+        function displayIndex(){
+            document.getElementById("password").innerHTML="<a href='Date.html'>001 Display Date</a><hr>";
+        }
+        function show(){
+            const password = document.getElementById("password").value;
+            if (password==="1234"){
+                displayIndex();
+            }else {
+                alert("Wrong Password!");
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Please input user name</h1>
+<label for="user"></label>
+<input id="user" type="text">
+<script>
+    function checkUser(){
+        const user=document.getElementById("user").value;
+        if(user==='user'){
+            document.write("<h1 id='password'>Please input your password.</h1>\n" +
+                "<label for=\"password\">Enter Password</label>\n" +
+                "<input id=\"password\" type=\"password\">\n" +
+                "<button type=\"button\" onclick=\"show()\">Check Password</button><br>");
+        }else {
+            alert("No this user!");
+        }
+    }
+</script>
+<button type="button" onclick="checkUser()">Check User</button>
+</body>
+</html>
